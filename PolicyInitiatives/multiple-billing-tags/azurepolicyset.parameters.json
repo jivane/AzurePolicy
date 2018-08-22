@@ -1,0 +1,53 @@
+{
+	"Environment": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the Environment ( i.e. Production, UAT, Development etc)"
+		}
+	},
+	"Application": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the main application type (i.e. Webserver, Database etc.)"
+		}
+	},
+	"CostCenter": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter your Cost Center.)"
+		}
+	},
+	"Owner": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the Email address of the Server Owner.)"
+		}
+	},
+	
+	"Business-Unit": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the Business Unit name(i.e. Digital,Marketing,Ops etc.)"
+		}
+	},
+		"Project": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the Name of the Project Name (i.e. Contoso,Retail)"
+		}
+	},
+	
+	"Confidential": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please Answer Yes or No if the System has confidential Data.)"
+		}
+	},
+	
+	"Compliance": {
+		"type": "String",
+		"metadata": {
+			"displayName": "Please enter the name of the Compliance officer that has sanctioned this server.)"
+		}
+	},
+}

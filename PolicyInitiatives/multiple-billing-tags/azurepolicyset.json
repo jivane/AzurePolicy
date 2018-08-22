@@ -1,0 +1,141 @@
+{
+    "properties": {
+        "displayName": "Billing Tags Policy Initiative",
+        "description": "Specify CostCenter,Env,App,Owner,BU,Confidential,Compliance, tag",
+        "parameters": {
+            "Environment": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the Environment ( i.e. Production, UAT, Development etc)"
+                }
+            },
+            "Application": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the main application type (i.e. Webserver, Database etc.)"
+                }
+            },
+            "CostCenter": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter your Cost Center.)"
+                }
+            },
+            "Owner": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the Email address of the Server Owner.)"
+                }
+            },
+            
+            "Business-Unit": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the Business Unit name(i.e. Digital,Marketing,Ops etc.)"
+                }
+            },
+                "Project": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the Name of the Project Name (i.e. Contoso,Retail)"
+                }
+            },
+            
+            "Confidential": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please Answer Yes or No if the System has confidential Data.)"
+                }
+            },
+            
+            "Compliance": {
+                "type": "String",
+                "metadata": {
+                    "displayName": "Please enter the name of the Compliance officer that has sanctioned this server.)"
+                }
+            }
+        },
+        "policyDefinitions": [
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Environment"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Environment')]"
+                    }
+                }
+            },   
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Application"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Application')]"
+                    }
+                }
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "CostCenter"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('CostCenter')]"
+                    }
+                }
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Owner"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Owner')]"
+                    }
+                }
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Business-Unit"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Business-Unit')]"
+                    }
+                }
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Confidential"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Confidential')]"
+                    }
+                }
+            },
+            {
+                "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e30110a-5ceb-460c-a204-c1c3969c6d62",
+                "parameters": {
+                    "tagName": {
+                        "value": "Compliance"
+                    },
+                    "tagValue": {
+                        "value": "[parameters('Compliance')]"
+                    }
+                }
+            }            
+        ]
+    },
+    "id": "/subscriptions/a48a924d-6007-4c39-a3c0-5466b9012f42/providers/Microsoft.Authorization/policySetDefinitions/billingTagsPolicy",
+    "type": "Microsoft.Authorization/policySetDefinitions",
+    "name": "billingTagsPolicy"
+}
